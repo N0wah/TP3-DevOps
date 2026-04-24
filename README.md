@@ -72,14 +72,14 @@ Attendre que tous les services affichent `(healthy)`.
 | `GET /health` | Les deux | État de santé de l'API |
 
 ```bash
-curl http://localhost:8001/posts
-curl http://localhost:8001/users
+curl http://localhost:8000/posts
+curl http://localhost:8000/users
 ```
 
 ## Interfaces d'administration
 
-- **Mongo Express** → http://localhost:8081 (login/mdp dans `.env`)
-- **Adminer** → http://localhost:8090 — Système : `MySQL`, Serveur : `db_mysql`
+- **Mongo Express** → http://localhost:8080 (login/mdp dans `.env`)
+- **Adminer** → http://localhost:8080 — Système : `MySQL`, Serveur : `db_mysql`
 
 ## Arrêter la stack
 
