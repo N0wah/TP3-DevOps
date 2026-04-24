@@ -78,7 +78,7 @@ curl http://localhost:8000/users
 
 ## Interfaces d'administration
 
-- **Mongo Express** → http://localhost:8080 (login/mdp dans `.env`)
+- **Mongo Express** → http://localhost:8081 (login/mdp dans `.env`)
 - **Adminer** → http://localhost:8080 — Système : `MySQL`, Serveur : `db_mysql`
 
 ## Arrêter la stack
