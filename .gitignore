@@ -1,0 +1,25 @@
+# Fichier d'environnement (NE JAMAIS committer)
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/

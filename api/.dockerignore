@@ -1,0 +1,21 @@
+# Fichiers à exclure de l'image Docker
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+.env
+.env.*
+!.env.example
+
+.git/
+.gitignore
+
+*.md
+*.txt
+!requirements.txt
+
+.vscode/
+.idea/
+
+*.log
