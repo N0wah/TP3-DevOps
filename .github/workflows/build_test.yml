@@ -17,7 +17,7 @@ jobs:
      - name: Build image for scanning Python
        run: docker build -t my-app-python:1.0.0 -f ./api/Dockerfile .
      - name: Build image for scanning Mongo 
-       run: docker build -t my-app-mongo:1.0.0 -f ./mongo/Dockerfile ./mongo
+       run: docker build -t my-app-mongo:1.0.0 -f ./mongo/Dockerfile .
      - name: Login to Docker Hub
        uses: docker/login-action@v4
        with:
