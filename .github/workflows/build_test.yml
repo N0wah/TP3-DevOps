@@ -34,6 +34,17 @@ jobs:
           only-severities: critical
           exit-code: true
 
+      - name: Build Mongo image
+        run: docker build -t my-app-mongo:1.0.0 -f ./mongo/Dockerfile ./mongo
+
+      - name: Docker Scout scan Mongo (fail on critical)
+        uses: docker/scout-action@v1
+        with:
+          command: cves
+          image: my-app-mongo:1.0.0
+          only-severities: critical
+          exit-code: true
+
       - name: Trivy scan MySQL (report only)
         uses: aquasecurity/trivy-action@master
         with:
