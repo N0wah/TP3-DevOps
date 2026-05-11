@@ -38,11 +38,13 @@ jobs:
          image: my-app-mongo:1.0.0
          file: ./mongo/Dockerfile
          only-severities: criticals,high
-         exit-code: false   
+         exit-code: false
   docker-compose:
     needs: build-test
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Checkout code
         run: docker compose up -d   
         env:
