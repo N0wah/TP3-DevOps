@@ -1,4 +1,4 @@
-FROM mongo:8.0
+FROM mongo:7.0
 USER mongodb
 
 COPY ./init-scripts /docker-entrypoint-initdb.d/

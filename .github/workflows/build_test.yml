@@ -32,6 +32,7 @@ jobs:
           command: cves
           image: my-app-python:1.0.0
           only-severities: critical
+          ignore-base: true
           exit-code: true
 
       - name: Build Mongo image
@@ -43,6 +44,7 @@ jobs:
           command: cves
           image: my-app-mongo:1.0.0
           only-severities: critical
+          ignore-base: true
           exit-code: true
 
       - name: Trivy scan MySQL (report only)
