@@ -71,7 +71,7 @@ jobs:
           DELAY=5
           for i in $(seq 1 $MAX); do
             echo "Attempt $i/$MAX..."
-            STATUSES=$(docker compose ps --format json | jq -r '.[].Health')
+            STATUSES=$(docker compose ps --format json | jq -rs '.[].Health')
             echo "Statuses: $STATUSES"
             UNHEALTHY=$(echo "$STATUSES" | grep -v "^healthy$" | grep -v "^$" || true)
             ALL_COUNT=$(echo "$STATUSES" | grep -c "." || true)
